@@ -109,13 +109,10 @@ export class AppComponent implements OnInit{
   }
 
   public searchEmployees(key: string): void {
-    console.log(key);
+
     const results: Employee[] = [];
     for (const employee of this.employees) {
-      if (employee.employeeFirstName.toLowerCase().indexOf(key.toLowerCase()) !== -1
-        || employee.employeeDesignation.toLowerCase().indexOf(key.toLowerCase()) !== -1
-        || employee.employeeEmail.toLowerCase().indexOf(key.toLowerCase()) !== -1
-        || employee.employeeImageUrl.toLowerCase().indexOf(key.toLowerCase()) !== -1) {
+      if (employee.employeeFirstName.toLowerCase().indexOf(key.toLowerCase()) !== -1){
         results.push(employee);
       }
     }
