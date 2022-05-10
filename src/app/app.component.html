@@ -17,6 +17,24 @@
   </div>
 </nav>
 <div class="container mt-5" id="main-container">
+  <div>
+    <ng-select
+      [items]="employees"
+      bindLabel="employeeFirstName"
+      bindValue="employeeId"
+      [searchable]="true"
+      [clearable]="true"
+      [(ngModel)]="selectEmployee">
+    </ng-select>
+
+<!--    <ng-select [items]="departments"-->
+<!--               bindLabel="departmentName"-->
+<!--               bindValue="id"-->
+<!--               [searchable]="true"-->
+<!--               [clearable]="true"-->
+<!--               [(ngModel)]="filters.departmentId">-->
+<!--    </ng-select>-->
+  </div>
   <div class="row" >
     <div *ngFor="let employee of employees;let i = index" class="col-md-6 col-xl-3">
       <div class="card m-b-30  mt-5">

@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import {EmployeeService} from "./Service/employee.service";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import { NgSelectModule } from '@ng-select/ng-select';
+
+
 
 @NgModule({
   declarations: [
@@ -13,7 +16,8 @@ import {FormsModule} from "@angular/forms";
     imports: [
         BrowserModule,
         HttpClientModule,
-        FormsModule
+        FormsModule,
+        NgSelectModule
     ],
   providers: [],
   bootstrap: [AppComponent]
